@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root {
+    --primary: #e11d48; /* accent red */
+    --primary-light: #f9fafb; /* very light gray */
+    --secondary: #fff; /* white */
+    --dark: #111111; /* black */
+    --gray: #374151; /* dark gray for text */
+    --light: #fff; /* white */
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    scroll-behavior: smooth;
+}
+.gradient-bg, .hero-bg {
+    background: var(--primary-light);
+}
+.card-hover {
+    transition: all 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.active::after {
+    width: 100%;
+}
+.skill-icon {
+    transition: all 0.3s ease;
+}
+.skill-icon:hover {
+    transform: scale(1.1);
+}
+.project-image {
+    transition: all 0.5s ease;
+}
+.project-image:hover {
+    transform: scale(1.03);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+/* Update text and button color utility classes for hero section */
+.text-indigo-600, .text-emerald-600 {
+    color: var(--dark) !important;
+}
+.bg-white, .bg-indigo-100, .bg-emerald-100 {
+    background-color: #fff !important;
+}
+.border-white {
+    border-color: #fff !important;
+}
+.hover\:text-indigo-600:hover, .hover\:text-emerald-600:hover {
+    color: var(--primary) !important;
+}
+.hover\:bg-gray-100:hover {
+    background-color: var(--primary-light) !important;
+}
+.bg-indigo-50, .bg-emerald-50 {
+    background-color: var(--primary-light) !important;
+}
+.text-indigo-700, .text-emerald-700 {
+    color: var(--gray) !important;
+}
+.text-indigo-800, .text-emerald-800 {
+    color: var(--gray) !important;
+}
+/* Accent for buttons and links */
+.button-accent {
+    color: #fff;
+    background-color: var(--primary);
+    border: none;
+}
+.button-accent-outline {
+    color: var(--primary);
+    background: #fff;
+    border: 2px solid var(--primary);
+}
+.button-accent-outline:hover {
+    background: var(--primary);
+    color: #fff;
+}
+.nav-link.active, .nav-link:hover {
+    color: var(--primary) !important;
+    border-bottom: 2px solid var(--primary);
+    background: none !important;
+}
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    position: relative;
+}
+h1.hero-title::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--primary);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+.hero-subtitle {
+    color: var(--gray);
+    font-weight: 500;
+}
+p, .hero-desc {
+    color: var(--gray);
+}
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #b91c1c;
+}
+.hero-entry {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: heroFadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.2s forwards;
+}
+@keyframes heroFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.text-primary {
+    color: var(--primary) !important;
+}
+.skill-card {
+    transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 2px 8px 0 rgba(17,17,17,0.04);
+}
+.skill-card:hover {
+    box-shadow: 0 8px 24px 0 rgba(17,17,17,0.10);
+    transform: translateY(-4px) scale(1.03);
+}
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.page-entry {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: pageFadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1) 0.1s forwards;
+}
+@keyframes pageFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
